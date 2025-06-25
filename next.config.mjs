@@ -5,10 +5,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/nextjs-github-pages",
+  trailingSlash: true,
+  basePath: "/ktrct.github.io", // Change this to match your exact repository name
+  assetPrefix: "/ktrct.github.io", // Add this line
   images: {
     unoptimized: true,
   },
 };
 
 export default nextConfig;
+
