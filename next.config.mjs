@@ -5,8 +5,7 @@
 const nextConfig = {
   output: "export",
   trailingSlash: true,
-  // No basePath needed for username.github.io repos
-  // No assetPrefix needed for username.github.io repos
+  devIndicators: false,
   images: {
     unoptimized: true,
   },
