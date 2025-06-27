@@ -1,4 +1,7 @@
-## [LINK](https://ktrct.github.io/)
+<a 
+  href="https://ktrct.github.io/"
+  target="_blank"
+  rel="noopener noreferrer">
 
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
