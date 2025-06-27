@@ -9,8 +9,17 @@ export function Nav() {
     const [navHeight, setNavHeight] = useState(null);
 
     useEffect(() => {
-        if (navRef.current) {
-            setNavHeight(navRef.current.offsetHeight);
+        const onLoad = () => {
+            if (navRef.current) {
+                setNavHeight(navRef.current.offsetHeight);
+            }
+        };
+
+        if (document.readyState === 'complete') {
+            onLoad();
+        } else {
+            window.addEventListener('load', onLoad);
+            return () => window.removeEventListener('load', onLoad);
         }
     }, []);
 
