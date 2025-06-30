@@ -26,7 +26,7 @@ export function Nav() {
     return (
         <nav
             ref={navRef}
-            className="sticky top-0 flex items-center space-x-10 bg-blue-100 pt-6 pb-6 w-full text-black *:z-49"
+            className="sticky top-0 flex items-center space-x-10 bg-blue-100 pt-6 pb-6 w-full text-black z-30 *:z-49"
         >
             {navHeight !== null && <ScrollLinked navHeight={navHeight} />}
 

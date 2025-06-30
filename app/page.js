@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import WavyText from './components/WavyText.js';
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <Image
-              className="dark:invert"
+              className="dark:invert z-0"
               src="/vercel.svg"
               alt="Vercel logomark"
               width={20}
@@ -43,6 +44,7 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <p>one two <WavyText text={"wavy"} /> three</p>
         <div className="w-20">
           testets k kf kdf okfdskofds kofskdo kofdkso ksoko fdkof ksodkfsokfso kowefkosd kosdkfok ffffffffffffffffffffffffffffffff sdfk
            sofksok oskfo k testets k kf kdf okfdskofds kofskdo kofdkso ksoko fdkof ksodkfsokfso kowefkosd kosdkfok ffffffffffffffffffffffffffffffff sdfk
