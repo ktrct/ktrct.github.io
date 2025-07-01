@@ -20,7 +20,7 @@ function Example() {
     queryKey: ["player"],
     queryFn: async () => {
       const response = await fetch(
-        "https://api.wynncraft.com/v3/player/KeterComet"
+        "https://api.cors.lol/?url=https://api.wynncraft.com/v3/player/KeterComet"
       )
       return await response.json()
     }
