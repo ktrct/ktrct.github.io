@@ -1,3 +1,4 @@
+'use client'
 import React from "react"
 import {
   QueryClient,
@@ -31,8 +32,8 @@ function Example() {
 
   return (
     <div>
-      <h1>{data.online}</h1>
-      <p>{data.rankbadge}</p>
+      <h1>{data.username}</h1>
+      <p>{data.server}</p>
       <div>{isFetching ? "Updating..." : ""}</div>
     </div>
   )
