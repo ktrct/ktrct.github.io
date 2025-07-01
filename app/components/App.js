@@ -8,6 +8,8 @@ import {
 } from "@tanstack/react-query"
 import WavyText from './WavyText.js';
 
+import WavyText from './WavyText.js';
+
 const queryClient = new QueryClient()
 
 export default function App() {
