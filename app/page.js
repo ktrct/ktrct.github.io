@@ -1,10 +1,11 @@
 'use client'
 import Image from "next/image";
 import WavyText from './components/WavyText.js';
+import App from './components/App.js';
 
 export default function Home() {
   return (
-    <div className="grid items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-linear-to-b from-cyan-600 to-blue-700">
+    <div className="grid items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-linear-to-b from-cyan-600 to-blue-700 overscroll-auto">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-sans)]">
           <li className="mb-2 tracking-[-.01em]">
@@ -29,6 +30,7 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <App />
         <p>one two <WavyText text={"wavy"} /> three</p>
         <div className="w-20">
           testets k kf kdf okfdskofds kofskdo kofdkso ksoko fdkof ksodkfsokfso kowefkosd kosdkfok ffffffffffffffffffffffffffffffff sdfk
