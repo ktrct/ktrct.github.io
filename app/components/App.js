@@ -6,7 +6,6 @@ import {
     QueryClientProvider,
     useQuery
 } from "@tanstack/react-query"
-import WavyText from './WavyText.js';
 
 import WavyText from './WavyText.js';
 
