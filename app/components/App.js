@@ -28,7 +28,7 @@ function Example() {
         queryKey: ["player", playerName],
         queryFn: async () => {
             const response = await fetch(
-                "https://api.allorigins.win/raw?url=https://api.wynncraft.com/v3/player/" + playerName
+                "https://api.allorigins.win/raw?url=https://api.wynncraft.com/v3/player/" + playerName +"?fullResult"
             )
             return await response.json()
         },
@@ -81,8 +81,10 @@ function Example() {
             )}
             {data && !data.Error && (
                 <div className="bg-gray-50 p-4 rounded-md">
+                    
                     <h1 className="text-xl text-black mb-2">{data.username}</h1>
                     <div className="text-black">
+                        <HL c={data.characters}/>
                         Total playtime: {Math.floor(data.playtime)} hrs <br />
                         {data.online ? "Online on " : "Last seen on "} {data.server} <br />
                         {data.guild ? (
@@ -91,11 +93,7 @@ function Example() {
                                 className="hover:text-green-700 underline text-green-900"
                                 target="_blank"
                                 > {data.guild.name} </Link> </>
-                        ) : (
-                            "No guild"
-                        )}
-                        <br />
-
+                            ) : ("No guild")} <br />
                         Warcount: {data.globalData.wars} (#{data.ranking.warsCompletion}) <br />
                         --- <br />
                         Total Raids: {data.globalData.raids.total} <br />
@@ -126,6 +124,20 @@ function Icon({ name }) {
             <span className="material-symbols-outlined" style={{ fontSize: '12px' }}>
                 {name}
             </span>
+        </div>
+    )
+}
+
+function HL({c}) {
+    const highestLvl = (characters) => {
+    return Object.entries(characters).reduce((highest, [id, char]) => {
+        return char.level > highest.level ? { ...char, id } : highest;
+    }, { level: -1 });
+    };
+    const hc = highestLvl(c)
+    return (
+        <div>
+            <p>Highest lvl class: {hc.level} {hc.type}</p>
         </div>
     )
 }
