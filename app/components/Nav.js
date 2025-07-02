@@ -32,7 +32,7 @@ export function Nav() {
         {navHeight !== null && <ScrollLinked navHeight={navHeight} />}
 
         <Link className="hover:text-cyan-600 transition-colors pl-6 z-50" href="/">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=optional" />
             <span className="material-symbols-outlined" style={{ fontSize: '50px' }}>
                 home
             </span>

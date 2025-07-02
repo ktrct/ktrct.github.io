@@ -101,7 +101,7 @@ function Example() {
             {isMultiSelector && (
                 <div className="bg-yellow-50 p-4">
                     <h3 className="text-lg font-medium text-yellow-800">multiple players have this name logged</h3>
-                    <p className="text-yellow-700 mb-3">choose the player you're looking for:</p>
+                    <p className="text-yellow-700 mb-3">choose the player you&#39;re looking for:</p>
                     <div className="space-y-2">
                         {Object.entries(data).map(([uuid, playerInfo]) => {
                             // Skip the _responseStatus property we added
@@ -172,7 +172,7 @@ function Example() {
 function Icon({ name }) {
     return (
         <div className="inline-block">
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=optional" />
             <span className="material-symbols-outlined" style={{ fontSize: '12px' }}>
                 {name}
             </span>
